@@ -18,6 +18,6 @@
   "dependencies": {
     "broccoli": "^0.16.2",
     "rsvp": "^3.0.17",
-    "walk-sync": "^0.1.3"
+    "walk-sync": "^0.2.6"
   }
 }

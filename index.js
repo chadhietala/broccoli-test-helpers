@@ -13,7 +13,10 @@ function tree(plugin, fixturePath, filter) {
   var build = function() {
     process.chdir(fixturePath);
     return builder.build().then(function(tree) {
-      var paths = walkSync(tree.directory);
+      var entries = walkSync.entries(tree.directory);
+      paths = entries.map(function(entry) {
+        return entry.relativePath;
+      });
 
       if (filter) {
         paths = filter(paths, tree);
@@ -21,6 +24,7 @@ function tree(plugin, fixturePath, filter) {
 
       return {
         files: paths,
+        entries: entries,
         directory: tree.directory,
         builder: function() {
           return build().then(function(results) {
