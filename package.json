@@ -1,6 +1,6 @@
 {
   "name": "broccoli-test-helpers",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "Test helpers for broccoli",
   "main": "index.js",
   "repository": {
