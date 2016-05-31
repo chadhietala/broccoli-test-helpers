@@ -52,7 +52,7 @@ function tree(plugin, fixturePath, filter) {
  * @property {String} options.fixturePath The path to the fixtures being used for the test
  * @property {Function} [options.prepSubject] Lifecycle method called before the testing to allow you to setup spies on the test subject. You are passed the instance of the subject.
  * @property {Function} [options.filter] Filtering function that is applied to result of the build.
- * @return {Promise}
+ * @return {Function}
  */
 function makeTestHelper(options) {
   var cwd = process.cwd();
