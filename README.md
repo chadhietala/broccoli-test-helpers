@@ -42,14 +42,14 @@ describe('myBroccoliPlugin', function() {
       ]);
 
       result.files.forEach(function(file) {
-        expect(fs.readFileSync(path.join(result.directory, file), 'utf8')).to.equal(fs.readFileSync(path.join(assertions, file), 'utf8'));
+        expect(fs.readFileSync(path.join(result.directory, file), 'utf8')).to.equal(fs.readFileSync(path.join(expectations, file), 'utf8'));
       });
 
       // optionally you can test a rebuild by performing
       // some mutation on the files and then rebuilding.
       // You would then chain another .then() on the end
       // and preform assertions.
-      // 
+      //
       // return result.builder();
     });
   })
